@@ -62,6 +62,7 @@ fun HomeScreen(
     val coroutineScope = rememberCoroutineScope()
     val haptic = LocalHapticFeedback.current
 
+
     // Apply sorting and filtering
     val filteredTasks = remember(tasks, filterOption) {
         when (filterOption) {
@@ -173,7 +174,7 @@ fun HomeScreen(
                         "${(animatedProgress * 100).toInt()}%",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Text(
                         "Completed",
@@ -239,7 +240,7 @@ fun HomeScreen(
                             FilterOption.PENDING -> "No pending tasks"
                         },
                         style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
@@ -309,7 +310,7 @@ fun HomeScreen(
                                 modifier = Modifier
                                     .offset { IntOffset(offsetX.roundToInt(), 0) }
                                     .shadow(elevation, shape = MaterialTheme.shapes.medium)
-                                    .background(MaterialTheme.colorScheme.surface)
+                                    .background(MaterialTheme.colorScheme.secondary)
                                     .pointerInput(Unit) {
                                         detectDragGestures(
                                             onDragStart = {

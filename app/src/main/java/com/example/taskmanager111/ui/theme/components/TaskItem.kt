@@ -64,16 +64,36 @@ fun TaskItem(
 
 @Composable
 fun PriorityIndicator(priority: Priority) {
-    val (color, text) = when (priority) {
-        Priority.HIGH -> Pair(Color.Red, "High")
-        Priority.MEDIUM -> Pair(Color.Yellow, "Medium")
-        Priority.LOW -> Pair(Color.Green, "Low")
+    val (containerColor, textColor, text) = when (priority) {
+        Priority.HIGH -> Triple(
+            Color(0xFFD32F2F),  // Dark red container
+            Color(0xFFFFCDD2),  // Light red text
+            "High"
+        )
+        Priority.MEDIUM -> Triple(
+            Color(0xFFF57C00),  // Dark orange container
+            Color(0xFFFFE0B2),  // Light orange text
+            "Medium"
+        )
+        Priority.LOW -> Triple(
+            Color(0xFF388E3C),  // Dark green container
+            Color(0xFFC8E6C9),  // Light green text
+            "Low"
+        )
     }
 
-    Text(
-        text = text,
-        color = color
-    )
+    Surface(
+        shape = MaterialTheme.shapes.small,
+        color = containerColor,
+        modifier = Modifier.padding(start = 8.dp)
+    ) {
+        Text(
+            text = text,
+            color = textColor,
+            style = MaterialTheme.typography.labelSmall,
+            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+        )
+    }
 }
 
 @Preview

@@ -92,7 +92,8 @@ The app features smooth animations, intuitive navigation, and accessibility supp
 - **Full Source Code** (Jetpack Compose, Android SDK 35/34, Kotlin 2.x)
 - **README.md** (this file)
 - **APK file** for testing
-- TaskManager.apk
+- ## Download APK
+You can download the latest APK from [GitHub Releases](https://github.com/Salonety/taskmanager111/blob/master/TaskManager.apk).
 
 ---
 

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">taskmanager111</string>
+    <string name="settings_title">Settings</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="theme_settings">Appearance</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="light_theme">Light theme</string>
+    <string name="theme_colors">Dark theme</string>
+    <string name="dynamic_color">Dynamic colors</string>
+    <string name="accent_color">Accent color</string>
+    <string name="theme_mode">Theme Mode</string>
+    <string name="system_theme">System Default</string>
+
+</resources>
